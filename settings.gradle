@@ -17,8 +17,10 @@ include 'services:webservice'
 
 rootProject.name = 'springcloud-example'
 
-include 'sc-eureka_server'
-include 'sc-eureka_client'
-include 'sc-compute'
+//producer 奇数，consumer偶数
+include 'sc-eureka_server' //port 7777
+include 'sc-eureka_client' //port 8001
+include 'sc-producer_compute' //port 8003
+include 'sc-consumer_feign' //port 8002
 
 
