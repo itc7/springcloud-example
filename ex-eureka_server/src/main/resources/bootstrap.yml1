@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-server
+  cloud:
+    config:
+      #配置文件所用的环境
+      profile: dev
+      #uri: http://192.168.10.12:8888
+      #利用注册服务器发现config路径
+      discovery:
+        enabled: true
+        service-id: config-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://xiaohei.com:8761/eureka/

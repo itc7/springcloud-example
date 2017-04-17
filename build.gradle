@@ -1,0 +1,49 @@
+buildscript {
+	ext {
+		springBootVersion = '1.4.4.RELEASE'
+		springCloudVersion = 'Camden.SR5'
+	}
+
+	repositories {
+		mavenLocal()
+		maven{url 'http://localhost:8088/nexus/content/groups/public/'}
+		maven{url 'http://maven.aliyun.com/nexus/content/groups/public'}
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+allprojects {
+	apply plugin: 'java'
+	apply plugin: 'idea'
+	apply plugin: 'eclipse'
+	apply plugin: 'org.springframework.boot'
+
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+
+	[compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+
+	repositories {
+		mavenLocal()
+		maven{url 'http://localhost:8088/nexus/content/groups/public/'}
+		maven{url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+		mavenCentral()
+	}
+
+	dependencyManagement {
+		imports {
+			mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+		}
+	}
+}
+
+
+
+
+
+
+

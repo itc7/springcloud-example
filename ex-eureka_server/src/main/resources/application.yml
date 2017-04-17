@@ -1,0 +1,16 @@
+server:
+  port: 7777
+
+eureka:
+  server:
+    enable-self-preservation: true #默认为true(开启保护模式)
+  instance:
+    #hostname: localhost #?
+    prefer-ip-address: true #获取服务的ip地址而非主机名
+  client:
+    #是否注册到Eureka服务器,单个注册服务器应设定为false
+    register-with-eureka: false
+    #是否从Eureka服务器获取注册信息，单个注册服务器应设定为false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://localhost:7777/eureka/
