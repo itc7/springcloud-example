@@ -1,4 +1,4 @@
-package cn.itc7.sc.eureka.sumdemo.controller;
+package cn.itc7.sc.compute.sumdemo.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
