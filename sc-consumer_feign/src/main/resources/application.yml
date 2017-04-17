@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: consumer_feign
+    name: consumer-feign
 
 eureka:
   client:

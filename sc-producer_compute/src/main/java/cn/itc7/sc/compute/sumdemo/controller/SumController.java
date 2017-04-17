@@ -1,6 +1,7 @@
 package cn.itc7.sc.compute.sumdemo.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SumController {
 
-    @RequestMapping("/sum")
+    @RequestMapping(value = "/sum", method = RequestMethod.GET)
     int sumTest(Integer a, Integer b){
         return a + b;
     }
