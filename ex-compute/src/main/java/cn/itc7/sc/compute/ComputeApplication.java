@@ -1,4 +1,4 @@
-package cn.itc7.sc.eureka;
+package cn.itc7.sc.compute;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
