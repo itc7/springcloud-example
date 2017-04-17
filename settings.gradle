@@ -16,7 +16,8 @@ include 'services:webservice'
 */
 
 rootProject.name = 'springcloud-example'
-include 'ex-eureka_server'
 
+include 'ex-eureka_server'
+include 'ex-eureka_client'
 
 
